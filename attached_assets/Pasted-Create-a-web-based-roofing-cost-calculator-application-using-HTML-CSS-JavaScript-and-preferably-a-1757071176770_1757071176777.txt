@@ -1,0 +1,30 @@
+Create a web-based roofing cost calculator application using HTML, CSS, JavaScript, and preferably a modern framework like React for dynamic interactivity. The app should be designed for integration into the Torrance Roofing Masters website at https://torranceroofingmasters.com/. Use a modern, flat design style with clean lines, minimal shadows, a color palette of blues and grays (inspired by roofing themes), sans-serif fonts like Roboto or Open Sans, and dynamic elements such as smooth animations for input changes, real-time cost updates without page reloads, and responsive layout for mobile and desktop.
+The calculator should cover both residential and commercial roofing, with updated 2025 cost values based on Torrance, CA averages. Start with a selector for "Residential" or "Commercial" roofing type, which dynamically updates the available material options and any cost adjustments.
+Key features and inputs:
+
+Radio buttons or toggle for Roofing Type: Residential or Commercial.
+Numeric input for Roof Size in square feet (validate for positive numbers, max 50,000 sq ft).
+Dropdown for Roofing Material:
+
+For Residential: Asphalt Shingles ($5–$10/sq ft installed), Clay/Concrete Tile ($11–$25/sq ft), Metal ($7–$20/sq ft), Wood Shake/Shingles ($8–$15/sq ft), Slate ($15–$40/sq ft), Flat Membrane (EPDM/TPO) ($7–$12/sq ft).
+For Commercial: Add or emphasize commercial-specific options like TPO Membrane ($4–$8/sq ft), PVC Membrane ($5–$9/sq ft), EPDM Rubber ($4–$9/sq ft), Modified Bitumen ($4.50–$9/sq ft), Built-Up Roofing (BUR) ($5.50–$10/sq ft), Metal ($8–$15/sq ft), Asphalt Shingles ($7–$10/sq ft if applicable for smaller commercial).
+
+
+Dropdown for Job Type: New Installation (full cost), Full Replacement (full cost plus optional tear-off), Repair/Partial (50–70% of full cost).
+Dropdown for Roof Complexity: Simple/Low Pitch (+0% adjustment), Medium/Standard (+20%), Complex/Steep Pitch & Multi-Level (+40%).
+Checkboxes for Add-ons: Tear-off of Old Roof (adds $1–$2/sq ft for replacements), Building Permits (adds flat $400–$600).
+
+Calculation logic:
+
+Base cost per sq ft: Use the material's range; calculate low, mid, and high estimates (e.g., for Asphalt Residential: low $5, mid $7.50, high $10).
+Multiply base by roof size.
+Apply complexity multiplier to labor portion (assume 40% of base is labor, adjustable by +0/20/40%).
+If Tear-off checked and Job Type is Replacement: Add $1–$2/sq ft (mid $1.50).
+If Permits checked: Add $400–$600 (mid $500).
+For Repair: Multiply total by 0.5–0.7 (mid 0.6).
+Commercial adjustments: Slightly higher labor multipliers if needed (e.g., +10% overall for scale), but keep similar to residential unless specified.
+Output: Display a breakdown in a dynamic card or table showing Materials Cost, Labor Cost, Add-ons, Total Estimated Range (low to high), and Midpoint Total. Include a disclaimer: "This is a ballpark estimate based on 2025 Torrance, CA averages. Contact Torrance Roofing Masters for a free quote."
+Add a button to "Get a Free Quote" linking to https://torranceroofingmasters.com/contact/.
+Include a section to help estimate roof size: Inputs for home footprint sq ft, overhang inches, pitch (dropdown: flat, low, medium, steep), and auto-calculate adjusted sq ft with waste factor (10–15%).
+
+Make the UI dynamic: Use sliders or number inputs with live previews, fade-in animations for results, and validation/error messages. Ensure accessibility (ARIA labels, keyboard navigation). Optimize for embedding (e.g., as an iframe or script tag). Generate the full code, including any necessary dependencies, and provide instructions for hosting on Replit and embedding on the website.
