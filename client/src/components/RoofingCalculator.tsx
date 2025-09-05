@@ -25,7 +25,7 @@ import {
 } from '@/lib/roofing-calculations';
 import { useToast } from '@/hooks/use-toast';
 
-const CHART_COLORS = ['hsl(var(--chart-1))', 'hsl(var(--chart-2))', 'hsl(var(--chart-3))'];
+const CHART_COLORS = ['#3b82f6', '#10b981', '#f59e0b']; // Blue, Green, Amber
 
 export default function RoofingCalculator() {
   const { toast } = useToast();
